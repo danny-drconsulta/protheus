@@ -1,0 +1,425 @@
+
+.content-page .layout-box {
+    float: left;
+    width: 50%;
+}
+
+.content-page .layout-box .box-card {
+    overflow: hidden;
+    margin: 0 34px 30px -30px;
+    padding: 0 0 0 30px;
+}
+
+.content-page .layout-box .title-box {
+    float: left;
+    width: 100%;
+    z-index: 15;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.content-page .layout-box .title-box:before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 8;
+    content: "";
+    margin-top: -1px;
+    position: absolute;
+    height: 1px;
+    background: #D4D4D4
+}
+
+.content-page .layout-box .title-box h3 {
+    float: left;
+    color: #a8a8a8;
+    font-size: 18px;
+    margin-right: 8px;
+    z-index: 10;
+    background: #FFF;
+    max-height: 20px;
+    position: relative;
+    padding-right: 10px;
+}
+
+.content-page .layout-box .graph-card-half {
+    margin: 0;
+    width: 50%;
+    float: left;
+}
+
+.content-page .layout-box .graph-card {
+    margin: 0 0 0 -30px;
+    float: left;
+    width: calc(100% + 30px);
+}
+
+.content-page .layout-box .graph-card.cleared {
+    margin: 0;
+    width: 100%;
+}
+
+.content-page .layout-box .graph-card #perfGaugeYTDSales, .content-page .layout-box .graph-card #perfGaugeLastYearSales {
+    height: 180px;
+}
+
+.content-page .layout-box .graph-card #dailySalesChart, .content-page .layout-box .graph-card #monthlySalesChart {
+    height: 220px;
+}
+
+.content-page .layout-box .graph-card #forecastGraph {
+    height: 100px;
+}
+
+.content-page #pieChart {
+    display: block;
+    height: 370px;
+    margin-top: 20px;
+}
+
+.content-page .layout-box .graph-card.more-space {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0 30px 0;
+}
+
+.content-page .layout-box .subtitle {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: rgba(55,55,55,0.6);
+    font-size: 12px;
+    padding: 6px 8px;
+    margin-top: 10px;
+    line-height: 20px;
+    border: 0px solid #d4d4d4;
+}
+
+.content-page .layout-box .subtitle span {
+    color: rgba(55,55,55,1);
+    font-size: 20px;
+    margin: 3px 0 0;
+}
+
+.content-page .layout-box .list-numbers {
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.content-page .layout-box .list-numbers li {
+    float: left;
+    color: rgba(55,55,55,0.6);
+    font-size: 12px;
+    padding: 6px 12px;
+    line-height: 20px;
+    border: 0px solid #d4d4d4;
+    border-width: 0 0 0 1px;
+}
+
+.content-page .layout-box .list-numbers li span {
+    color: rgba(55,55,55,1);
+    font-size: 20px;
+    margin: 3px 0 0;
+}
+
+.content-page .graph-navigation {
+    float: left;
+    width: 100%;
+}
+
+.content-page .graph-navigation div {
+    float: left;
+    width: calc(100% - 10px);
+    cursor: pointer;
+    text-align: center;
+    padding: 7px 0 1px 0;
+    margin: 0 5px;
+    height: 30px;
+    font-size: 14px;
+    color: #ffffff;
+    transition: all 0.5s;
+    background: #05aff6;
+    background: -moz-linear-gradient(top, #05aff6 0%, #0597d4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#05aff6), color-stop(100%,#0597d4));
+    background: -webkit-linear-gradient(top, #05aff6 0%,#0597d4 100%);
+    background: -o-linear-gradient(top, #05aff6 0%,#0597d4 100%);
+    background: -ms-linear-gradient(top, #05aff6 0%,#0597d4 100%);
+    background: linear-gradient(to bottom, #05aff6 0%,#0597d4 100%);
+    border: 0px solid #125875;
+    border-width: 0 0 2px 0;
+    border-radius: 2px;
+}
+
+.content-page .graph-navigation div:hover {
+    background: #0389c1;
+    background: -moz-linear-gradient(top, #0ca3e2 0%, #0389c1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0ca3e2), color-stop(100%,#0389c1));
+    background: -webkit-linear-gradient(top, #0ca3e2 0%,#0389c1 100%);
+    background: -o-linear-gradient(top, #0ca3e2 0%,#0389c1 100%);
+    background: -ms-linear-gradient(top, #0ca3e2 0%,#0389c1 100%);
+    background: linear-gradient(to bottom, #0ca3e2 0%,#0389c1 100%);
+}
+
+.content-page .graph-navigation div.disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+.content-page .graph-navigation div.active {
+    background: #f3de2b;
+    background: -moz-linear-gradient(top, #f3de2b 0%, #dcc33b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3de2b), color-stop(100%,#dcc33b));
+    background: -webkit-linear-gradient(top, #f3de2b 0%,#dcc33b 100%);
+    background: -o-linear-gradient(top, #f3de2b 0%,#dcc33b 100%);
+    background: -ms-linear-gradient(top, #f3de2b 0%,#dcc33b 100%);
+    background: linear-gradient(to bottom, #f3de2b 0%,#dcc33b 100%);
+    border: 0px solid #716b3a;
+    border-width: 0 0 2px 0;
+}
+
+.content-page .graph-navigation div.active:hover {
+    background: #c3b325;
+    background: -moz-linear-gradient(top, #f3de2b 0%, #c3b325 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3de2b), color-stop(100%,#c3b325));
+    background: -webkit-linear-gradient(top, #f3de2b 0%,#c3b325 100%);
+    background: -o-linear-gradient(top, #f3de2b 0%,#c3b325 100%);
+    background: -ms-linear-gradient(top, #f3de2b 0%,#c3b325 100%);
+    background: linear-gradient(to bottom, #f3de2b 0%,#c3b325 100%);
+}
+
+.content-page .graph-navigation .yesterday > div {
+    min-width: 116px;
+}
+
+.content-page .graph-navigation .prev span, .content-page .graph-navigation .next span {
+    background-image: url(../images/icon/chart-prev.png);
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 1px 0 0 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content-page .graph-navigation .next span {
+    background-image: url(../images/icon/chart-next.png);
+}
+
+.content-page .graph-navigation .prev {
+    width: 51px;
+}
+
+.content-page .graph-navigation .next {
+    width: 46px;
+}
+
+.content-page .title-mobile {
+    float: left;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 25px;
+    color: #d8dadd;
+    text-align: center;
+}
+
+/* COMPUTADOR 1024 */
+
+@media screen and (max-width: 1250px) {
+    .content-page .layout-box .list-numbers li {
+        font-size: 10px;
+        padding: 5px 5px;
+    }
+
+    .content-page .layout-box .list-numbers li span {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .content-page #pieChart {
+        height: 300px;
+    }
+}
+
+
+/* TABLET 992 */
+
+@media screen and (max-width: 992px) {
+    .content-page .layout-box .list-numbers li {
+        width: 50%;
+        padding: 4px 0;
+        color: #666666;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: right;
+        box-sizing: border-box;
+    }
+
+    .content-page .layout-box .list-numbers li:nth-child(1), .content-page .layout-box .list-numbers li:nth-child(3) {
+        border-left: none;
+        text-align: left;
+    }
+
+    .content-page .layout-box .list-numbers li span {
+        font-weight: normal !important;
+    }
+
+    .content-page .graph-navigation .prev, .content-page .graph-navigation .next {
+        display: none;
+    }
+
+    .content-page .graph-navigation td {
+        width: 50%;
+    }
+
+    .content-page .layout-box .graph-card-half {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .content-page .layout-box .graph-card #perfGaugeYTDSales, .content-page .layout-box .graph-card #perfGaugeLastYearSales {
+        height: 100px;
+    }
+}
+
+/* MOBILE 768 */
+@media screen and (max-width: 768px) {
+    body {
+        background: #293953;
+    }
+    
+    .content-page {
+        padding: 0;
+    }
+
+    .content-page .layout-box {
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+    }
+    .content-page .content-layout-box {
+        float: left;
+        width: 100%;
+        position: relative;
+    }
+    
+    .content-page .layout-box .box-card {
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .content-page .layout-box .graph-card {
+        margin: 0;
+        width: 100%;
+        padding: 15px 15px 15px 0;
+    }
+
+    .content-page .layout-box.active {
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .content-page .layout-box .title-box, .content-page .graph-navigation {
+        display: none;
+    }
+
+    .content-page .layout-box .box-card.active {
+        opacity: 1;
+        z-index: 10;
+        position: relative;
+        padding-bottom: 140px;
+    }
+
+    .content-page .layout-box .graph-card-half {
+        width: 50%;
+    }
+
+    .content-page .layout-box .box-card.active .graph-card {
+        background: #3c8dbc;
+    }
+
+    .dxc-val-axis text, .dxc-arg-axis text, #pieChart .dxc-item text, .dxc-series .dxc-elements {
+        fill: white !important;
+    }
+
+    .content-page .layout-box .box-card.active .list-numbers {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 20px;
+        position: absolute;
+    }
+
+    .content-page .layout-box .list-numbers li {
+        font-size: 13px;
+        color: rgb(67 186 255);
+    }
+    
+    .content-page .layout-box .list-numbers li span {
+        color: white;
+        font-size: 17px;
+    }
+
+    .content-page .layout-box .graph-card #perfGaugeYTDSales, .content-page .layout-box .graph-card #perfGaugeLastYearSales {
+        height: 160px;
+        padding: 0 5px;
+    }
+    
+    .content-page .layout-box .graph-card #dailySalesChart, .content-page .layout-box .graph-card #monthlySalesChart {
+        height: 300px;
+    }
+    
+    .content-page .layout-box .graph-card #forecastGraph {
+        height: 90px;
+    }
+
+    #anual .graph-card {
+        padding: 15px;
+    }
+
+    .content-page .tab-graph {
+        float: left;
+        width: 100%;
+    }
+
+    .content-page .tab-graph li {
+        float: left;
+        width: 20%;
+        height: 45px;
+        color: white;
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 45px;
+        text-align: center;
+        transition: all 0.5s;
+        background: #20324e;
+        border: 1px solid #293953;
+        border-bottom: none;
+    }
+
+    .content-page .tab-graph li.active {
+        background: #3c8dbc;
+    }
+
+    .content-page .layout-box .graph-card.more-space {
+        margin: 0;
+    }
+
+    .content-page .layout-box .subtitle, .content-page .layout-box .subtitle span {
+        color: white;
+    }
+
+    .content-page .layout-box .list-numbers li {
+        padding: 8px 0;
+    }
+}

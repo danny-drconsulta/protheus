@@ -1,0 +1,102 @@
+.dx-row img {
+	height: 100px;
+}
+
+
+#gridContainer .dx-datagrid-search-panel {
+	margin-left: 0px;
+}
+
+.dx-datagrid .dx-data-row > td.bullet {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+
+.center {
+	margin: auto;
+	text-align: center;
+	display: block;
+}
+
+.dotOn {
+	height: 15px;
+	width: 15px;
+	background-color: blue;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.dotOff {
+	height: 15px;
+	width: 15px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+
+
+
+
+/*
+#gridContainer {
+	height: 450px;
+}
+*/
+
+#gridContainer {
+	max-height: 800px;
+}
+
+#gridContainer tr.main-row td:not(:first-child) {
+	height: 21px;
+}
+
+#gridContainer tr.notes-row {
+	white-space: normal;
+	vertical-align: top;
+}
+
+#gridContainer tr.notes-row td {
+	height: 70px;
+	color: #999;
+}
+
+.dark #gridContainer tr.notes-row td {
+	color: #777;
+}
+
+#gridContainer tbody.employee:hover {
+	background-color: #EBEBEB;
+}
+
+.dark #gridContainer tbody.employee:hover {
+	background-color: #484848;
+}
+
+#gridContainer tbody.employee:hover tr.main-row td {
+	color: #000;
+}
+
+.dark #gridContainer tbody.employee:hover tr.main-row td {
+	color: #CCC;
+}
+
+#gridContainer tbody.employee:hover tr.notes-row td {
+	color: #888;
+}
+
+
+
+.text {}
+
+.img {
+	height: 300px
+}
+
+.try {
+	/*   width: 100px; */
+	/*   height: 100px; */
+	background-color: blue;
+}

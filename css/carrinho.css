@@ -1,0 +1,243 @@
+
+#gridContainer .dx-datagrid-table  {
+    table-layout: inherit;
+}
+
+#gridContainer .dx-datagrid-rowsview .dx-datagrid-table tbody[role="presentation"] {
+    display: none !important;
+}
+
+.title-page {
+    float: left;
+    width: 100%;
+    color: #3d619a;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3d619a;
+}
+
+.content-page {
+    padding: 80px 30px 30px 30px;
+}
+
+#gridContainer {
+    float: left;
+    width: 100%;
+}
+
+.content-page .row-item {
+    float: left;
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-page .row-item td {
+    float: left;
+    width: 100%;
+}
+
+.content-page .row-item .thumbnail {
+    float: left;
+    width: 90px;
+    height: 90px;
+    padding: 1px;
+    overflow: hidden;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.content-page .row-item .content-description {
+    float: left;
+    overflow: hidden;
+    padding-left: 30px;
+    box-sizing: border-box;
+    width: calc(100% - 300px);
+}
+
+.content-page .row-item .content-description .title {
+    color: #666;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.content-page .row-item .content-description .title strong {
+    font-weight: bold;
+}
+
+.content-page .row-item .content-description p {
+    float: left;
+    width: 100%;
+    color: #777;
+    font-size: 14px;
+    line-height: 120%;
+    white-space: normal;
+}
+
+.content-page .row-item .content-description .price {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    color: #4daa4e;
+    font-weight: bold;
+}
+
+.content-page .content-compra {
+    float: right;
+    width: 200px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+.content-page .content-compra .content-quantidade {
+    float: left;
+    width: 80px;
+    margin: 0 60px;
+}
+
+.content-page .content-compra .content-quantidade .minus {
+    float: left;
+    width: 25px;
+    height: 30px;
+    color: #666;
+    cursor: pointer;
+    padding-top: 6px;
+    font-size: 14px;
+    background: #DDD;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 3px 0 0 3px;
+}
+
+.content-page .content-compra .content-quantidade .plus {
+    float: left;
+    width: 25px;
+    height: 30px;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    padding-top: 6px;
+    background: #DDD;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+}
+
+.content-page .content-compra .content-quantidade input {
+    float: left;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    font-size: 14px;
+    color: #666666;
+    padding: 2px 4px;
+    text-align: center;
+    background: white;
+    border: 1px solid #dddddd;
+}
+
+.content-page .remover-carrinho {
+    float: left;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    margin-top: 5px;
+    color: #777777;
+    cursor: pointer;
+    text-align: center;
+    background: #FFFFFF;
+    text-decoration: underline;
+}
+
+.content-page .finalizar-compra {
+    float: right;
+    width: 200px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    background: #0597d4;
+    text-transform: uppercase;
+    border: 1px solid #0597d4;
+}
+
+/* COMPUTADOR 1024 */
+@media screen and (max-width: 1250px) {
+    .content-page .row-item .content-description .title {
+        font-size: 16px;
+    }
+
+    .content-page .row-item .content-description p {
+        font-size: 13px;
+    }
+
+    .content-page .adicionar-carrino {
+        width: 160px;
+        font-size: 12px;
+    }
+
+    .content-page .row-item .content-description {
+        padding-left: 15px;
+        width: calc(100% - 260px);
+    }
+}
+
+
+/* TABLET 992 */
+@media screen and (max-width: 992px) {
+    .content-page .row-item .content-description .title {
+        font-size: 14px;
+    }
+
+    .content-page .row-item .content-description p {
+        font-size: 11px;
+    }
+
+    .content-page .row-item .content-description .price {
+        font-size: 16px;
+    }
+}
+
+/* MOBILE 768 */
+@media screen and (max-width: 768px) {
+    .content-page {
+        padding: 20px 0 80px 0;
+    }
+
+    .content-page .row-item .content-description {
+        padding-left: 10px;
+        width: calc(100% - 90px);
+    }
+
+    .content-page .row-item {
+        padding: 15px;
+    }
+    
+    .content-page .row-item .content-description {
+        min-height: 90px;
+    }
+
+    .content-page .adicionar-carrino {
+        float: left;
+        width: auto;
+        font-size: 10px;
+        line-height: 20px;
+        margin-left: 100px;
+        padding: 5px;
+        margin-top: 0;
+    }
+}
