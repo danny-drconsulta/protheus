@@ -181,6 +181,7 @@ body {
     outline: none;
     padding: 6px 12px;
     font-size: 13px;
+    transition: all 0.5s;
     line-height: 1.42857143;
     box-sizing: border-box;
     border-top-left-radius: 2px;
@@ -189,6 +190,7 @@ body {
     border-bottom-left-radius: 2px;
 }
 
+
 .main-sidebar .sidebar-form .input-group input[type="text"]:focus {
     color: #666;
     background-color: #fff;
@@ -196,6 +198,10 @@ body {
 
 .main-sidebar .sidebar-form .input-group input[type="text"]:focus + .input-group-btn button {
     background: white;
+}
+
+.main-sidebar .sidebar-form .input-group input[type="text"].error, .main-sidebar .sidebar-form .input-group input[type="text"].error + .input-group-btn button {
+    background: #ff9c9c;
 }
 
 .main-sidebar .sidebar-form .input-group .input-group-btn {
@@ -207,10 +213,29 @@ body {
     vertical-align: middle;
 }
 
+.main-sidebar .sidebar-form .input-group .input-group-btn .close {
+    top: 50%;
+    left: -15px;
+    display: none;
+    cursor: pointer;
+    margin-top: -6px;
+    position: absolute;
+}
+
+.main-sidebar .sidebar-form .input-group .input-group-btn .close:after {
+    float: left;
+    color: #999;
+    font-size: 12px;
+    font-weight: 900;
+    content: "\f00d";
+    font-family: 'Font Awesome 5 Free';
+}
+
 .main-sidebar .sidebar-form .input-group .input-group-btn .btn {
     height: 35px;
     color: #999;
     box-shadow: none;
+    transition: all 0.5s;
     background-color: #374850;
     border: 1px solid transparent;
     border-top-left-radius: 0;
@@ -257,6 +282,10 @@ body {
 
 .main-sidebar .sidebar-menu > li.active span .fa, .main-sidebar .sidebar-menu > li.current-page span .fa {
     transform: rotate(265deg);
+}
+
+.main-sidebar br {
+    display: none;
 }
 
 .main-sidebar .sidebar-menu > li > a {
@@ -336,7 +365,18 @@ body {
     }
 
     .main-header {
-        display: none;
+        top: 0;
+        left: calc(100vw + 230px);
+        position: fixed;
+    }
+
+    .main-header .nav li.carrinho {
+        right: 0;
+        top: 10px;
+        display: block;
+        position: fixed;
+        background: #293953;
+        border-radius: 5px 0 0 5px;
     }
 
     .main-sidebar {
@@ -474,5 +514,9 @@ body {
     .main-sidebar .treeview-menu a .fa span {
         float: left;
         width: 100%;
+    }
+
+    .main-sidebar br {
+        display: block;
     }
 }

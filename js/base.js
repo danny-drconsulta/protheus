@@ -46,12 +46,22 @@ $(document).ready(function(){
     });
     
     // DESKTOP - Pesquisa pelos sub menus
+    $(".main-sidebar .sidebar-form .close").on("click tap", function(){
+        $(this).parents(".sidebar-form").find(".form-control").val("");
+        $(this).parents(".sidebar-form").find(".form-control").removeClass("error");
+    });
+
     $(".main-sidebar .form-control").on("keyup", function(){
+        let that = this;
+
         // Transformando o texto em slug, para conseguir comparar ignorando acentos, assim iremos achar escrevendo com ou sem acentos
         var search = string_to_slug($(this).val());
 
         // Minimo de caracteres para pesquisar
         if(search.length > 3){
+
+            // Aparecer botão de limpar
+            $(".main-sidebar .sidebar-form .close").show();
 
             // Pesquisar em todos os submenus o texto
             $(".treeview-menu li").each(function(){
@@ -79,7 +89,20 @@ $(document).ready(function(){
                         $(this).find(".treeview-menu").slideToggle();
                     }
                 });
+
+                // Se não achar nenhum aberto, deixar o campo vermelho
+                console.log($(".treeview.active"));
+                console.log($(".treeview.active").length);
+                if($(".treeview.active").length == 0){
+                    $(that).addClass("error");
+                } else {
+                    $(that).removeClass("error");
+                }
             });
+        } else {
+
+            // Sumir o botão de limpar
+            $(".main-sidebar .sidebar-form .close").show();
         }
     });
 

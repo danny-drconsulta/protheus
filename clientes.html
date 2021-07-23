@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>Dashboard - Sunny</title>
+	<title>Clientes - Sunny</title>
 	
 	<meta charset="UTF-8">
 	<meta charset="utf-8" />
@@ -13,7 +13,8 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+	<link rel="stylesheet" type="text/css" href="css/iziToast.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/clientes.css" />
 	<link rel="stylesheet" type="text/css" href="css/fontawesome.css" />
 	
 	<!-- CSS - Dev Express -->
@@ -27,9 +28,10 @@
 
 	
 	<!-- SCRIPTS -->
+	<script src='js/iziToast.min.js'></script>
 	<script src='js/helper.js'></script>
 	<script src='js/base.js'></script>
-	<script src='js/dashboard.js'></script>
+	<script src='js/clientes.js'></script>
 	
 </head>
 
@@ -49,7 +51,7 @@
 			</a>
 			
 			<div class="navbar-custom-menu">
-				<ul class="nav">
+				<ul class="nav navbar-nav">
 					<li class="carrinho">
 						<a href="/carrinho.html">
 							<i class="fas fa-shopping-cart">
@@ -85,7 +87,7 @@
 				</div>
 			</form>
 			<ul class="sidebar-menu" data-widget="tree">
-				<li class="current-page">
+				<li>
 					<a href="/dashboard.html">
 						<i class="fa fa-tachometer-alt"></i> <span>Dashboard</span>
 					</a>
@@ -95,7 +97,7 @@
 						<i class="fa fa-box-open"></i> <span>Criar Pedido</span>
 					</a>
 				</li>
-				<li>
+				<li class="current-page">
 					<a href="/clientes.html">
 						<i class="fa fa-user-friends"></i> <span>Clientes</span>
 					</a>
@@ -184,145 +186,10 @@
 
 	<!-- BODY - PAGE -->
 	<main class="content-page">
-		<p class="title-mobile show-xs">
-			Dashboard de Vendas
+		<p class="title-page">
+			Clientes
 		</p>
-		<ul class="tab-graph show-xs">
-			<li class="active" data-show="#day">
-				<span>Diarias</span>
-			</li>
-			<li data-show="#month">
-				<span>Mensais</span>
-			</li>
-			<li data-show="#meta">
-				<span>Meta</span>
-			</li>
-			<li data-show="#anual">
-				<span>Anuais</span>
-			</li>
-			<li data-show="#sector">
-				<span>Setor</span>
-			</li>
-		</ul>
-		<div class="content-layout-box">
-			<div class="layout-box active">
-				<div id="day" class="box-card active">
-					<div class="title-box">
-						<h3>Vendas diarias</h3>
-					</div>
-					<ul class="list-numbers">
-						<li>
-							HOJE<br>
-							<span>R$0.37M</span>
-						</li>
-						<li>
-							ONTEM<br>
-							<span>R$1.31M</span>
-						</li>
-						<li>
-							ÚLTIMA SEMANA<br>
-							<span>R$8.30M</span>
-						</li>
-						<li>
-							ÚLTIMO ANO<br>
-							<span>R$435M</span>
-						</li>
-					</ul>
-					<div class="graph-card">
-						<div id="dailySalesChart"></div>
-					</div>
-					<table class="graph-navigation" data="vendas-diarias">
-						<tbody>
-							<tr>
-								<td class="prev"><div id="getPrevDaySales"><span></span></div></td>
-								<td class="yesterday"><div id="getLastDaySales"><span>Ontem</span></div></td>
-								<td class="today"><div id="getThisDaySales" class="active"><span>Hoje</span></div></td>
-								<td class="next"><div id="getNextDaySales" class="disabled"><span></span></div></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>   
-			
-				<div id="anual" class="box-card">
-					<div class="title-box">
-						<h3>Vendas anuais</h3>
-					</div>
-					<div class="graph-card more-space">
-						<div class="graph-card-half">
-							<div id="perfGaugeYTDSales"></div>
-							<div class="subtitle">
-								ANO ATÉ AGORA<br>
-								<span>R$211M</span>
-							</div>
-						</div>
-						<div class="graph-card-half">
-							<div id="perfGaugeLastYearSales"></div>
-							<div class="subtitle">
-								ANO FISCAL 2020<br>
-								<span>R$435M</span>
-							</div>
-						</div>
-					</div>
-				</div> 
-				
-				<div id="meta" class="box-card">
-					<div class="title-box">
-						<h3>Meta mensal <span id="currentYear">(Junho)</span></h3>
-					</div>
-					<div class="graph-card cleared">
-						<div id="forecastGraph"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="layout-box">
-				<div id="month" class="box-card">
-					<div class="title-box">
-						<h3>Vendas por mês</h3>
-					</div>
-					<ul class="list-numbers">
-						<li>
-							MES ATUAL<br>
-							<span>R$31M</span>
-						</li>
-						<li>
-							MES ANTERIOR<br>
-							<span>R$39M</span>
-						</li>
-						<li>
-							ANO ATUAL<br>
-							<span>R$211M</span>
-						</li>
-						<li>
-							ÚLTIMO ANO<br>
-							<span>R$435M</span>
-						</li>
-					</ul>
-					<div class="graph-card">
-						<div id="monthlySalesChart"></div>
-					</div>
-					<table class="graph-navigation" data="vendas-mes">
-						<tbody>
-							<tr>
-								<td class="prev"><div id="getPrevMonthSales"><span></span></div></td>
-								<td class="yesterday"><div id="getLastMonthSales"><span>Último mes</span></div></td>
-								<td class="today"><div class="active" id="getThisMonthSales"><span>Mês atual</span></div></td>
-								<td class="next"><div class="disabled" id="getNextMonthSales"><span></span></div></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			
-				<div id="sector" class="box-card">
-					<div class="title-box">
-						<h3>Vendas por setor</h3>
-					</div>
-					<div class="graph-card cleared">
-						<div id="pieChart"></div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="MultiViewContainer"></div>
 	</main>
 	
 </body>

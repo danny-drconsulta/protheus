@@ -1,0 +1,98 @@
+
+.title-page {
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+    color: #3d619a;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3d619a;
+}
+
+.content-page {
+    padding: 80px 30px 30px 30px;
+}
+
+.content-page .dx-datagrid-content .dx-visibility-change-handler svg {
+    margin-top: -3px;
+}
+
+#gridContainer {
+    float: left;
+    width: 100%;
+}
+
+
+.content-page .dx-datagrid-header-panel, .content-page .dx-toolbar {
+    background: #f7f7f7;
+}
+
+.content-page #grid-cancelados .dx-datagrid-header-panel, .content-page #grid-cancelados .dx-toolbar {
+    background: #FFFFFF;
+}
+
+.content-page .dx-toolbar-after {
+    left: 0;
+    padding-left: 0 !important;
+}
+
+.content-page .dx-toolbar-after .dx-datagrid-search-panel {
+    margin-left: 0 !important;
+}
+
+/* MOBILE 768 */
+@media screen and (max-width: 768px) {
+    .content-page {
+        padding: 20px 0 80px 0;
+    }
+
+    .content-page .row-item .content-description {
+        padding-left: 10px;
+        width: calc(100% - 90px);
+    }
+
+    .content-page .row-item {
+        padding: 15px;
+    }
+    
+    .content-page .row-item .content-description {
+        min-height: 90px;
+    }
+
+    .content-page .content-compra {
+        float: left;
+        width: 130px;
+        margin-top: 5px;
+        margin-left: 100px;
+    }
+
+    .content-page .dx-toolbar-after .dx-datagrid-search-panel {
+        width: 100% !important;
+    }
+
+    .content-page .dx-toolbar-after {
+        width: 96vw;
+        margin: 0 2%;
+        box-sizing: border-box;
+    }
+
+    #gridContainer .dx-datagrid-table > tbody[role="presentation"] .dx-header-row,
+    #gridContainer .dx-datagrid-table > tbody[role="presentation"] .dx-datagrid-filter-row {
+        display: none !important;
+    }
+
+    .dx-datagrid .dx-row > td {
+        font-size: 11px;
+        padding: 7px 3px !important;
+    }
+
+    .dx-command-expand.dx-datagrid-group-space {
+        width: 0;
+    }
+
+    .content-page .dx-datagrid-content .dx-visibility-change-handler svg {
+        margin-left: -5px;
+    }
+
+}

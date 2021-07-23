@@ -77,11 +77,11 @@
 		<section class="sidebar">
 			<form action="#" method="get" class="sidebar-form">
 				<div class="input-group">
-				  <input type="text" name="q" class="form-control" placeholder="Search...">
-					  <span class="input-group-btn">
-						<button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-						</button>
-					  </span>
+					<input type="text" name="q" class="form-control" placeholder="Pesquisar...">
+					<span class="input-group-btn">
+						<span class="close"></span>
+						<button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+					</span>
 				</div>
 			</form>
 			<ul class="sidebar-menu" data-widget="tree">
@@ -90,18 +90,19 @@
 						<i class="fa fa-tachometer-alt"></i> <span>Dashboard</span>
 					</a>
 				</li>
-				<li class="current-page">
+				<li>
 					<a href="/criar-pedido.html">
 						<i class="fa fa-box-open"></i> <span>Criar Pedido</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<i class="fa fa-compass"></i>
-						<span>Página 2</span>
-						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
-						</span>
+					<a href="/clientes.html">
+						<i class="fa fa-user-friends"></i> <span>Clientes</span>
+					</a>
+				</li>
+				<li>
+					<a href="/grade-vendas.html">
+						<i class="fa fa-user-friends"></i> <span>Grade de <br>Vendas</span>
 					</a>
 				</li>
 				<li class="treeview">
@@ -187,6 +188,10 @@
 			Carrinho
 		</p>
 		<div id="gridContainer"></div>
+
+		<p class="price-total">
+			<strong>Total:</strong> <span></span>
+		</p>
 		<button class="finalizar-compra">Criar o pedido</button>
 	</main>
 	

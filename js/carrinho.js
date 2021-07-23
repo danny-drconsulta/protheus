@@ -40,6 +40,7 @@ $(document).ready(function () {
         headerFilter: {
             visible: false
         },
+        showColumnHeaders: false,
         // groupPanel: {
         //     visible: true
         // },
@@ -118,6 +119,16 @@ $(document).ready(function () {
             container.append(html);
         },
     });
+
+    // Calcular total e colocar no HTML
+    var total = 0;
+    var cart = getCartFromCookie();
+
+    cart.forEach(item => {
+        total += item.DA1_PRCVEN;
+    });
+
+    $(".price-total span").html(total.toLocaleString('pt-br', {minimumFractionDigits: 2}));
 
     // Quantidade - aumentar ou diminuir
     $(document).on('click tap', '.content-quantidade .minus, .content-quantidade .plus', function() {

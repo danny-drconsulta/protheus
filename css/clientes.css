@@ -1,12 +1,4 @@
 
-#gridContainer .dx-datagrid-table, #gridContainerCancelados .dx-datagrid-table  {
-    table-layout: inherit !important;
-}
-
-#gridContainer .dx-datagrid-rowsview .dx-datagrid-table tbody[role="presentation"], #gridContainerCancelados .dx-datagrid-rowsview .dx-datagrid-table tbody[role="presentation"] {
-    display: none !important;
-}
-
 .title-page {
     float: left;
     width: 100%;
@@ -22,7 +14,15 @@
     padding: 80px 30px 30px 30px;
 }
 
-#gridContainer, #gridContainerCancelados {
+#grid-cancelados .dx-datagrid-table  {
+    table-layout: inherit !important;
+}
+
+#grid-cancelados .dx-datagrid-rowsview .dx-datagrid-table tbody[role="presentation"] {
+    display: none !important;
+}
+
+#gridContainer, #grid-cancelados {
     float: left;
     width: 100%;
 }
@@ -31,7 +31,7 @@
     background: #f7f7f7;
 }
 
-.content-page #gridContainerCancelados .dx-datagrid-header-panel, .content-page #gridContainerCancelados .dx-toolbar {
+.content-page #grid-cancelados .dx-datagrid-header-panel, .content-page #grid-cancelados .dx-toolbar {
     background: #FFFFFF;
 }
 
@@ -126,10 +126,53 @@
     font-weight: bold;
 }
 
+.content-page .title-detail {
+    float: left;
+    width: 100%;
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+}
+.content-page .content-info-client {
+    width: 60%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.content-page .content-info-client li {
+    width: 50%;
+    float: left;
+    padding: 15px 15px 0 0;
+    box-sizing: border-box;
+}
+
+.content-page .content-info-client li p {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #666666;
+}
+
+.content-page .content-info-client li p strong {
+    font-weight: bold;
+}
+
 .content-page .content-compra {
     float: right;
     width: 130px;
     margin-top: 20px;
+}
+
+.content-page .content-compra .quantidade-solicitada {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+}
+
+.content-page .content-compra .quantidade-solicitada strong {
+    font-weight: bold;
 }
 
 .content-page .content-compra.btn-off {
@@ -307,7 +350,7 @@
     margin-bottom: 5px;
 }
 
-.content-page .btn-client {
+.content-page .cliente-modal {
     float: left;
     border: none;
     outline: none;
@@ -320,7 +363,7 @@
     background: transparent
 }
 
-.content-page .btn-client:hover {
+.content-page .cliente-modal:hover {
     border-radius: 4px;
     background: #DDD;
 }
@@ -385,20 +428,63 @@
     margin-left: -6px;
 }
 
-.content-page .dx-popup-content {
-    overflow-y: scroll;
+.content-page .detalhe-btn {
+    font-size: 12px;
+    cursor: pointer;
+    color: #666666;
 }
 
-.popup .dx-popup-title .dx-toolbar-after {
-    top: 0;
-    right: 0;
-    left: auto;
-    position: absolute;
-    width: 30px !important;
+.dx-datagrid-rowsview .dx-row {
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
 }
 
-.popup .dx-toolbar-before {
+.content-page .content-tabs {
+    float: left;
     width: 100%;
+}
+
+.content-page .content-tabs .menu-tabs {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.content-page .content-tabs .menu-tabs li {
+    float: left;
+    font-size: 14px;
+    cursor: pointer;
+    color: #666666;
+    padding: 10px 15px;
+    margin-right: 10px;
+    text-align: center;
+    background: #f3f3f3;
+    border: 1px solid #DDDDDD;
+    border-bottom: none;
+}
+
+.content-page .content-tabs .menu-tabs li.active {
+    padding-top: 11px;
+    background: #FFF;
+    margin-bottom: -1px;
+}
+
+.content-page .content-tabs .tabs {
+    float: left;
+    width: 100%;
+    background: #FFF;
+    border: 1px solid #DDDDDD;
+}
+
+.content-page .content-tabs .tabs li {
+    float: left;
+    width: 100%;
+    display: none;
+    padding: 10px;
+}
+
+.content-page .content-tabs .tabs li.active {
+    display: block;
 }
 
 .content-page #grid-ficha-financeira {
@@ -450,6 +536,7 @@
     border: 1px solid #9999;
     margin-bottom: 5px;
 }
+
 
 /* COMPUTADOR 1024 */
 @media screen and (max-width: 1250px) {
@@ -532,12 +619,6 @@
         box-sizing: border-box;
     }
 
-    .popup .dx-toolbar-after {
-        margin: 0;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
     .content-page .content-detalhe .galeria-imagem {
         width: 100% !important;
         height: 200px !important;
@@ -553,7 +634,7 @@
     }
 
     .content-page .content-clientes .combobox {
-        width: calc(100% - 86px);
+        width: calc(100% - 42px);
     }
 
     .content-page .content-clientes {
@@ -564,32 +645,8 @@
         overflow: visible !important;
     }
 
-    .dx-popup-title.dx-toolbar {
-        padding: 6px 10px;
-    }
-
-    .popup .dx-toolbar-center {
-        margin: 0 !important;
-    }
-
-    .popup .dx-popup-content {
-        padding: 20px 0 !important;
-    }
-
-    .popup .row-item .content-description {
-        width: calc(100% - 130px) !important;
-    }
-
-    .popup .content-compra {
-        margin-left: 135px !important;
-    }
-
-    .popup .adicionar-carrinho-multiselect {
-        width: 100%;
-        line-height: 32px;
-    }
-
-    .content-page #grid-ficha-financeira {
+    .content-info-client, .title-detail {
         padding: 0 10px;
     }
+
 }
